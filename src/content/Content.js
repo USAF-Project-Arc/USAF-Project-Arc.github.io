@@ -5,6 +5,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 
 // custom
+import TeamView from './team/TeamView'
 
 function Content(props) {
 
@@ -16,7 +17,7 @@ function Content(props) {
                 marginTop: "7px"
             }}
         >
-           
+           <TeamView />
         </Box>
     )
 }
