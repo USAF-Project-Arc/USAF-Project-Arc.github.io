@@ -11,7 +11,7 @@ function getTeam(cohort, team) {
 }
 
 function getTeams(cohort) {
-    return require(`/${cohort}/teams.json`)
+    return require(`./${cohort}/teams.json`)
 }
 
 const data = {
