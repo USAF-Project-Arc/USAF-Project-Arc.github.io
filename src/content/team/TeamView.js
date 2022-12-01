@@ -6,8 +6,14 @@ import { FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mu
 
 // custom
 import TeamCard from './TeamCard'
+import data from '../../data/data'
 
 function TeamView(props) {
+
+    const [cohort, setCohort] = React.useState("delta")
+
+    let teamNames = data.getTeams(cohort)
+    let teams = teamNames.map(name => data.getTeam(cohort, name))
 
     return (
         <Grid
@@ -37,64 +43,17 @@ function TeamView(props) {
                         labelId="cohort-label"
                         id="cohort-selection"
                         label="Cohort"
-                        value="delta"
+                        value={cohort}
+                        onChange={event => setCohort(event.target.value)}
                     >
                         <MenuItem value="delta">Cohort Delta</MenuItem>
-                        <MenuItem value="gamma" disabled >Cohort Gamma</MenuItem>
+                        <MenuItem value="gamma" >Cohort Gamma</MenuItem>
                         <MenuItem value="beta" disabled >Cohort Beta</MenuItem>
                         <MenuItem value="alpha" disabled >Cohort Alpha</MenuItem>
                     </Select>
                 </FormControl>
             </Grid>
-            <TeamCard
-                unit="56th Fighter Wing"
-                location="Luke AFB, AZ"
-                emails={["bmswens@gmail.com", "otherguy@gmail.com"]}
-                img="56FW.gif"
-                projects={[
-                    {
-                        name: "F35 MX Automation",
-                        description: "Ideally these will be limited to one paragraph."
-                    },
-                    {
-                        name: "F16 Finger Brace",
-                        description: "Bracing fingers on F16s."
-                    },
-                    {
-                        name: "This website",
-                        description: "Stop, collaborate and listen."
-                    }
-                ]}
-                members={[
-                    {
-                        name: "Brandon Swenson",
-                        role: "Computer Scientist",
-                        afsc: "1N371G",
-                        unit: "34th IS",
-                        url: "https://www.linkedin.com/in/bmswens/",
-                        img: "swenson.jfif"
-                    },
-                    {
-                        name: "Jordon Jones",
-                        role: "Mechanical Engineer",
-                        afsc: "2A773",
-                        unit: "912nd ARS",
-                        img: "jones.jpg"
-                    }
-                ]}
-            />
-            <TeamCard
-                unit="A Totally Different Fighter Wing"
-                location="Hickam AFB, HI"
-                emails={["bmswens@gmail.com", "otherguy@gmail.com"]}
-                img="56FW.gif"
-                projects={[
-                    {
-                        name: "One Project",
-                        description: "But it's a very important one project."
-                    }
-                ]}
-            />
+            {teams.map(team => <TeamCard {...team} key={team.unit} />)}
         </Grid>
     )
 }

@@ -24,6 +24,7 @@ function TopNav(props) {
                     />
                     <Typography
                         variant="h4"
+                        sx={{ display: { xs: 'none', md: 'flex' }}}
                     >
                         Project Arc
                     </Typography>
