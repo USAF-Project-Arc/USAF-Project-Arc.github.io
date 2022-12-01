@@ -2,7 +2,7 @@
 import React from 'react'
 
 // MUI
-import { Grid } from '@mui/material'
+import { FormControl, Grid, InputLabel, MenuItem, Select, Typography } from '@mui/material'
 
 // custom
 import TeamCard from './TeamCard'
@@ -14,6 +14,38 @@ function TeamView(props) {
             container
             spacing={1}
         >
+            <Grid item xs={12}>
+                <Typography variant="h3" align="center">
+                    Our Teams
+                </Typography>
+            </Grid>
+            <Grid 
+                item 
+                xs={12}
+                sx={{
+                    display: "flex",
+                    justifyContent: "center"
+                }}
+            >
+                <FormControl
+                    sx={{
+                        width: "256px"
+                    }}
+                >
+                    <InputLabel id="cohort-label">Cohort</InputLabel>
+                    <Select
+                        labelId="cohort-label"
+                        id="cohort-selection"
+                        label="Cohort"
+                        value="delta"
+                    >
+                        <MenuItem value="delta">Cohort Delta</MenuItem>
+                        <MenuItem value="gamma" disabled >Cohort Gamma</MenuItem>
+                        <MenuItem value="beta" disabled >Cohort Beta</MenuItem>
+                        <MenuItem value="alpha" disabled >Cohort Alpha</MenuItem>
+                    </Select>
+                </FormControl>
+            </Grid>
             <TeamCard
                 unit="56th Fighter Wing"
                 location="Luke AFB, AZ"

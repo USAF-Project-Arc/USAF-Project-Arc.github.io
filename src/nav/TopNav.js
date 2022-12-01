@@ -2,7 +2,7 @@
 import React from 'react'
 
 // MUI
-import { AppBar, Box, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
 
 function TopNav(props) {
 
@@ -27,6 +27,21 @@ function TopNav(props) {
                     >
                         Project Arc
                     </Typography>
+                    <Box sx={{flexGrow: 1}} />
+                    <Button
+                        variant="contained"
+                        disabled
+                        sx={{
+                            mr: 1
+                        }}
+                    >
+                        Apply Now
+                    </Button>
+                    <Button
+                        variant="contained"
+                    >
+                        Contact Us
+                    </Button>
                 </Toolbar>
             </AppBar>
         </Box>
