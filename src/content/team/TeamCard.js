@@ -1,6 +1,7 @@
 // React
 import { Box, Button, Card, CardActions, CardContent, CardHeader, Grid } from '@mui/material'
 import React from 'react'
+import MemberSection from './MemberSection'
 import ProjectsSection from './ProjectsSection'
 
 
@@ -10,7 +11,8 @@ function TeamCard(props) {
         unit,
         location,
         emails,
-        projects
+        projects,
+        members
     } = props
 
     if (!projects) {
@@ -19,6 +21,10 @@ function TeamCard(props) {
 
     if (!emails) {
         emails = []
+    }
+
+    if (!members) {
+        members = []
     }
 
     return (
@@ -55,10 +61,17 @@ function TeamCard(props) {
                 </CardContent>
                 <Box sx={{flexGrow: 1}} />
                 <CardActions
-                    sx={{ display: "flex"}}
+                    sx={{ 
+                        display: "flex",
+                        alignItems: "flex-end"
+                    }}
                 >
+                    <MemberSection
+                        members={members}
+                    />
                     <Box sx={{flexGrow: 1}} />
                     <Button
+                        size="large"
                         variant="contained"
                         href={`mailto:${emails.join(';')}`}
                     >
