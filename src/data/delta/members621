@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Hannah Garwood",
+        "role": "Systems Engineer",
+        "afsc": "2T331",
+        "unit": "99th LRS",
+        "url": "xxxxxxxxx",
+        "img": "swenson.jfif"
+    },
+    {
+        "name": "Joshua Neustrom",
+        "role": "Computer/Electrical Engineer",
+        "afsc": "32E",
+        "unit": "",
+        "img": "jones.jpg"
+    }
+]
