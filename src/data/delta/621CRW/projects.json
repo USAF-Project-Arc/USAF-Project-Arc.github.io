@@ -8,7 +8,11 @@
         "description": "3D printed Onyx sleeves to put on radios to keep them at operating temperature to reduce instances of battery losage or mechanical failure."
     },
     {
-        "name": "xx",
-        "description": "xx"
+        "name": "Increment Monitoring - Cargo Deployment Automation",
+        "description": "Optimizing the increment monitoring process for mobility cargo by using QR codes/Teams/Sharepoint for associated paperwork."
+    },
+    {
+        "name": "Weapons Check-in/out",
+        "description": "Placing QR codes/barcodes on weapons to streamline check-in/out weapons to monitor users and created automated reports."
     }
 ]
