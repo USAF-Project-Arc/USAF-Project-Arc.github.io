@@ -4,10 +4,6 @@
         "description": "TAK Common Operating Picture training (tak.gov) - training units how to use application."
     },
     {
-        "name": "Hand Radio Thermal Sleeves",
-        "description": "3D printed Onyx sleeves to put on radios to keep them at operating temperature to reduce instances of battery losage or mechanical failure."
-    },
-    {
         "name": "Increment Monitoring - Cargo Deployment Automation",
         "description": "Optimizing the increment monitoring process for mobility cargo by using QR codes/Teams/Sharepoint for associated paperwork."
     },
