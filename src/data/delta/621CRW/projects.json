@@ -14,5 +14,9 @@
     {
         "name": "Weapons Check-in/out",
         "description": "Placing QR codes/barcodes on weapons to streamline check-in/out weapons to monitor users and created automated reports."
+    },
+    {
+        "name": "Austere Mesh Radio Networks",
+        "description": "Evaluating the ability of mesh radio networks to solve the interoperability challenges of austere communications. Conducting testing with a variety of modernized equipment."
     }
 ]
