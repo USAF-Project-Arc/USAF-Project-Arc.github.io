@@ -35,8 +35,8 @@
     {
         "name": "DCP Automation",
         "description": "Using Lieca Disto 7100i and a platform agnostic progressive web app to automatically record, analyze, and share DCP tests.",
-        "video": "",
-        "demo": "",
+        "video": "https://youtu.be/WMVLyLlIZCA",
+        "demo": "https://ez-dcp.swenson.software/",
         "source": "https://github.com/bmswens/EZ-DCP"
     },
     {
