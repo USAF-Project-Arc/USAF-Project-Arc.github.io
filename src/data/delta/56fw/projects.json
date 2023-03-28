@@ -1,14 +1,52 @@
 [
     {
-        "name": "F35 MX Automation",
-        "description": "Ideally these will be limited to one paragraph."
+        "name": "Inventory Management System",
+        "description": "Utilzing cameras, barcode scanners, and and webapp to make inventory management easier.",
+        "video": "https://youtu.be/JUbykl3b4vM",
+        "demo": "https://bmswens.github.io/Inventory-Management/",
+        "source": "https://github.com/bmswens/Inventory-Management"
     },
     {
-        "name": "F16 Finger Brace",
-        "description": "Bracing fingers on F16s."
+        "name": "F16 WAF (Wing Attach Fitting) Removal Tool",
+        "description": "F-16 wings are held onto the aircraft with WAF mounts. These mounts are extremely hard to remove for repair of fuel leaks, and can take in the neighborhood of 2-4 hrs to remove. Project Arc team members have fabricated a steel removal tool that utilizes 3D printed rubberized covers to be a buffer zone so that the steel tool does not touch the finger brace and cause damage. Now a task that once took 4 hours takes 10 mins.",
+        "video": ""
     },
     {
-        "name": "This website",
-        "description": "Stop, collaborate and listen."
+        "name": "Aegis Online Recall Roster",
+        "description": "Using progressive web app technology to modernize recall roster management, and even recalls themselves. ",
+        "demo": "https://aegis.swenson.software/",
+        "source": "https://github.com/bmswens/Aegis-Frontend"
+    },
+    {
+        "name": "LCTE Remote Control",
+        "description": "Enabling remote capabilities via mesh radio systems in order to configure and control low cost threat emitters (LCTE).",
+        "video": "https://youtu.be/h19_EGLyehw"
+    },
+    {
+        "name": "LCTE Power Solution",
+        "description": "Current power solution for LCTE is small gas generators, this solution requires a man in the loop for each LCTE which allows for a 12 hour run time. With the utilization of a Solar generator and Smart propane generator, now a LCTE can be left on and unmanned for 6 days before losing power.",
+        "external": "https://us.ecoflow.com/products/delta-pro-dual-fuel-generator"
+    },
+    {
+        "name": "Guillotine Pylon Rack",
+        "description": "This idea behind the racking system is to lower the floor space footprint at Luke AFB AME (Aircraft Munitions Equipment) storage warehouse.  The Guillotine Pylon Rack is a modular system which can lower the floor space footprint by 85%. The rack saves on loading and unloading time utilizing overhead crane systems by 50%.",
+        "image": ""
+    },
+    {
+        "name": "DCP Automation",
+        "description": "Using Lieca Disto 7100i and a platform agnostic progressive web app to automatically record, analyze, and share DCP tests.",
+        "video": "",
+        "demo": "",
+        "source": "https://github.com/bmswens/EZ-DCP"
+    },
+    {
+        "name": "Mobile Datacenter",
+        "description": "Assembling 2 small form factor PCs (SFFPC), 2 single board computers (SBC), and networking equipment into a single briefcase and preconfiguring with a series of applicaitons for DevSecOps, automation, data science, and AI/ML.",
+        "image": ""
+    },
+    {
+        "name": "Project Arc Website",
+        "description": "This website brought to you by viewers like you.",
+        "source": ""
     }
 ]
