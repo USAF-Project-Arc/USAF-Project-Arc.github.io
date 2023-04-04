@@ -3,7 +3,6 @@ import { Box, Button, Card, CardActions, CardContent, CardHeader, Grid, Dialog, 
 import React from 'react'
 import MemberSection from './MemberSection'
 import ProjectsSection from './ProjectsSection'
-import PropTypes from 'prop-types'
 import CloseIcon from '@mui/icons-material/Close';
 
 
@@ -30,15 +29,13 @@ function TeamCard(props) {
     }
 
     const [open, setOpen] = React.useState(false);
-    const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
     const handleClickOpen = () => {
         setOpen(true);
     };
 
-    const handleClose = (value) => {
+    const handleClose = () => {
         setOpen(false);
-        setSelectedValue(value);
     };
 
     return (
@@ -120,18 +117,8 @@ function SimpleDialog(props) {
       onClose(projects);
     };
 
-    const handleListItemClick = (value) => {
-      onClose(value);
-    };
-
     return (
       <Dialog maxWidth={"md"} onClose={handleClose} open={open}>
-
-
-        {/* <DialogTitle variant={"h4"}>{unit}</DialogTitle>
-        <DialogContent>
-            <ProjectsSection projects={projects} />
-        </DialogContent> */}
         <DialogTitle>
             <CardHeader
                 avatar={
@@ -155,7 +142,6 @@ function SimpleDialog(props) {
                     position: 'absolute',
                     right: 8,
                     top: 8,
-                    color: (theme) => theme.palette.grey[500],
                 }}
                 >
                 <CloseIcon />
@@ -170,12 +156,6 @@ function SimpleDialog(props) {
       </Dialog>
     );
   }
-
-SimpleDialog.propTypes = {
-    onClose: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
-    selectedValue: PropTypes.string.isRequired,
-};
 
 
 export default TeamCard
