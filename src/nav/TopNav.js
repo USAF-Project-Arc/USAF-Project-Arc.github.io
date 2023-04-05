@@ -40,6 +40,7 @@ function TopNav(props) {
                     </Button>
                     <Button
                         variant="contained"
+                        href="mailto:projectarc@us.af.mil"
                     >
                         Contact Us
                     </Button>
