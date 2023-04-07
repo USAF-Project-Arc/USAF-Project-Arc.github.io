@@ -1,5 +1,7 @@
 // testing help
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import CloseIcon from '@mui/icons-material/Close'
 
 // to test
 import TeamCard from './TeamCard'
@@ -52,5 +54,16 @@ describe('<TeamCard>', function() {
     it('should render a team with no emails without fail', function() {
         let noEmail = {...testTeam, emails: undefined}
         render(<TeamCard {...noEmail} />)
+    })
+    it('should open and close the dialog', function() {
+        render(<TeamCard {...testTeam} />)
+        let openButton = screen.getByRole("button", { name: "See All Projects"})
+        userEvent.click(openButton)
+        let dialog = screen.getByRole("dialog")
+        expect(dialog).not.toBeNull()
+        let closeButton = screen.getByRole("button", <CloseIcon/>)
+        userEvent.click(closeButton)
+        let dialogAgain = screen.queryByRole("dialog")
+        expect(dialogAgain).toBeFalsy
     })
 })

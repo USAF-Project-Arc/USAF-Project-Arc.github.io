@@ -49,7 +49,7 @@ function SimpleDialog(props) {
                     top: 8,
                 }}
                 >
-                    <CloseIcon />
+                    <CloseIcon/>
                 </IconButton>
             ) : null}
         </DialogTitle>

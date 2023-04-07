@@ -1,5 +1,7 @@
 // testing help
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import CloseIcon from '@mui/icons-material/Close';
 
 // to test
 import SimpleDialog from './SimpleDialog'
@@ -41,5 +43,12 @@ describe('<SimpleDialog>', function() {
     it('should render a team with no projects without fail', function() {
         let noProj = {...testTeam, projects: undefined}
         render(<SimpleDialog {...noProj} />)
+    })
+    it('should fire the close function on close', function() {
+        let close = jest.fn()
+        render(<SimpleDialog {...testTeam} onClose={close} />)
+        let closeButton = screen.getByRole("button", <CloseIcon/>)
+        userEvent.click(closeButton)
+        expect(close).toHaveBeenCalled()
     })
 })
