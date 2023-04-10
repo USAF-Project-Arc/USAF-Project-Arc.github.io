@@ -81,15 +81,13 @@ function TeamCard(props) {
                     />
                     <Box sx={{flexGrow: 1}} />
                     <Button
-                        size="large"
                         variant="contained"
-                        style={{marginRight: 10}}
+                        style={{marginRight: 3}}
                         onClick={handleClickOpen}
                     >
                         See More
                     </Button>
                     <Button
-                        size="large"
                         variant="contained"
                         href={`mailto:${emails.join(';')}`}
                     >
