@@ -64,6 +64,6 @@ describe('<TeamCard>', function() {
         let closeButton = screen.getByRole("button", <CloseIcon/>)
         userEvent.click(closeButton)
         let dialogAgain = screen.queryByRole("dialog")
-        expect(dialogAgain).toBeFalsy
+        expect(dialogAgain).not.toBeVisible()
     })
 })

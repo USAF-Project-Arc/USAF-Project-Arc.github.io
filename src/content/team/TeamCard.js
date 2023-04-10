@@ -101,7 +101,7 @@ function TeamCard(props) {
                         img={img}
                         projects={projects}
                         open={open}
-                        onClose={handleClose}
+                        handleClose={handleClose}
                     />
                 </CardActions>
             </Card>

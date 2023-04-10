@@ -8,7 +8,6 @@ import SimpleDialog from './SimpleDialog'
 
 const testTeam = {
     open: true,
-    onClose: false,
     unit: "56th Fighter Wing",
     location: "Luke AFB, AZ",
     img: "56FW.gif",
@@ -46,7 +45,7 @@ describe('<SimpleDialog>', function() {
     })
     it('should fire the close function on close', function() {
         let close = jest.fn()
-        render(<SimpleDialog {...testTeam} onClose={close} />)
+        render(<SimpleDialog {...testTeam} handleClose={close} />)
         let closeButton = screen.getByRole("button", <CloseIcon/>)
         userEvent.click(closeButton)
         expect(close).toHaveBeenCalled()

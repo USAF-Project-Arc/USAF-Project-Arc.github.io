@@ -6,8 +6,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 function SimpleDialog(props) {
     let {
-        onClose,
         open,
+        handleClose,
         unit,
         img,
         location,
@@ -18,31 +18,26 @@ function SimpleDialog(props) {
         projects = []
     }
 
-    const handleClose = () => {
-        onClose(projects);
-    };
-
     return (
         <Dialog maxWidth={"md"} onClose={handleClose} open={open}>
-        <DialogTitle>
-            <CardHeader
-                avatar={
-                    <Box
-                        component="img"
-                        alt={`${unit} logo`}
-                        src={`/img/units/${img}`}
-                        sx={{ width: "64px", height: "64px"}}
-                    />
-                }
-                title={unit}
-                titleTypographyProps={{variant: "h4"}}
-                subheader={location}
-                subheaderTypographyProps={{variant: "h5"}}
-            />
-            {onClose ? (
+            <DialogTitle>
+                <CardHeader
+                    avatar={
+                        <Box
+                            component="img"
+                            alt={`${unit} logo`}
+                            src={`/img/units/${img}`}
+                            sx={{ width: "64px", height: "64px"}}
+                        />
+                    }
+                    title={unit}
+                    titleTypographyProps={{variant: "h4"}}
+                    subheader={location}
+                    subheaderTypographyProps={{variant: "h5"}}
+                />
                 <IconButton
                 aria-label="close"
-                onClick={onClose}
+                onClick={handleClose}
                 sx={{
                     position: 'absolute',
                     right: 8,
@@ -51,11 +46,10 @@ function SimpleDialog(props) {
                 >
                     <CloseIcon/>
                 </IconButton>
-            ) : null}
-        </DialogTitle>
-        <DialogContent>
-            <ProjectsSection projects={projects}/>
-        </DialogContent>
+            </DialogTitle>
+            <DialogContent>
+                <ProjectsSection projects={projects}/>
+            </DialogContent>
         </Dialog>
     );
 }
