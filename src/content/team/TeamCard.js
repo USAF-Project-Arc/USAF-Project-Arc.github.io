@@ -3,7 +3,7 @@ import { Box, Button, Card, CardActions, CardContent, CardHeader, Grid } from '@
 import React from 'react'
 import MemberSection from './MemberSection'
 import ProjectsSection from './ProjectsSection'
-
+import SimpleDialog from './SimpleDialog'
 
 function TeamCard(props) {
     let {
@@ -27,6 +27,16 @@ function TeamCard(props) {
         members = []
     }
 
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <Grid
             item
@@ -44,9 +54,9 @@ function TeamCard(props) {
                     avatar={
                         <Box
                             component="img"
-                            alt={`${unit} logo`} 
-                            src={`/img/units/${img}`} 
-                            sx={{ width: "64px", height: "64px"}} 
+                            alt={`${unit} logo`}
+                            src={`/img/units/${img}`}
+                            sx={{ width: "64px", height: "64px"}}
                         />
                     }
                     title={unit}
@@ -56,12 +66,12 @@ function TeamCard(props) {
                 />
                 <CardContent>
                     <ProjectsSection
-                        projects={projects}
+                        projects={projects.slice(0,3)}
                     />
                 </CardContent>
                 <Box sx={{flexGrow: 1}} />
                 <CardActions
-                    sx={{ 
+                    sx={{
                         display: "flex",
                         alignItems: "flex-end"
                     }}
@@ -73,14 +83,31 @@ function TeamCard(props) {
                     <Button
                         size="large"
                         variant="contained"
+                        style={{marginRight: 10}}
+                        onClick={handleClickOpen}
+                    >
+                        See All Projects
+                    </Button>
+                    <Button
+                        size="large"
+                        variant="contained"
                         href={`mailto:${emails.join(';')}`}
                     >
                         Contact Us
                     </Button>
+                    <SimpleDialog
+                        unit={unit}
+                        location={location}
+                        img={img}
+                        projects={projects}
+                        open={open}
+                        handleClose={handleClose}
+                    />
                 </CardActions>
             </Card>
         </Grid>
     )
 }
+
 
 export default TeamCard
