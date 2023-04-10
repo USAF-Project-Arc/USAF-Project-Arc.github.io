@@ -86,7 +86,7 @@ function TeamCard(props) {
                         style={{marginRight: 10}}
                         onClick={handleClickOpen}
                     >
-                        See All Projects
+                        See More
                     </Button>
                     <Button
                         size="large"

@@ -19,7 +19,7 @@ function SimpleDialog(props) {
     }
 
     return (
-        <Dialog maxWidth={"md"} onClose={handleClose} open={open}>
+        <Dialog maxWidth={"md"} onClose={handleClose} open={open} scroll="body" >
             <DialogTitle>
                 <CardHeader
                     avatar={
