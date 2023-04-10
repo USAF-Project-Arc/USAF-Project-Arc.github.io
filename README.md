@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Project Arc Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Website Status](https://img.shields.io/badge/Website-Live-brightgreen)](https://usaf-project-arc.github.io/)
+[![Coverage Status](https://coveralls.io/repos/github/USAF-Project-Arc/USAF-Project-Arc.github.io/badge.svg?branch=main)](https://coveralls.io/github/USAF-Project-Arc/USAF-Project-Arc.github.io?branch=main)
+[![Test](https://github.com/USAF-Project-Arc/USAF-Project-Arc.github.io/actions/workflows/test.yml/badge.svg)](https://github.com/USAF-Project-Arc/USAF-Project-Arc.github.io/actions/workflows/test.yml)
+[![Deploy](https://github.com/USAF-Project-Arc/USAF-Project-Arc.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/USAF-Project-Arc/USAF-Project-Arc.github.io/actions/workflows/deploy.yml)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# Adding Data
+## Adding A New Team
+*Note: Commands assume you  have copied the git project to a local folder and are executing commands from the git root and using linux.*
+1. Add a folder for your team in the correct cohort.
+    - `mkdir ./src/data/delta/newTeam`
+2. Copy the data from the example team.
+    - `cp ./src/data/delta/example/* ./src/data/delta/example/newTeam/`
+3. Fill in the fields with the correct information.
+4. Add the folder name to the [teams.json](./src/data/delta/teams.json) file for the cohort.
+5. Commit your changes.
+6. Push your changes.
 
-### `npm start`
+## Adding Icons To Projects
+*Note: All icons are links that open the target in a new tab.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Project `json` object can take the following properties for additional icons added on bottom:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Property | Icon |
+| -------- | ---- |
+| video    |   [Icon](https://mui.com/material-ui/material-icons/?query=youtube&selected=YouTube)   | 
+| external | [Icon](https://mui.com/material-ui/material-icons/?query=link&selected=Link) |
+| image    | [Icon](https://mui.com/material-ui/material-icons/?query=image&selected=Image) |
+| source | [Icon](https://mui.com/material-ui/material-icons/?query=github&selected=GitHub) |
+| demo   | [Icon](https://mui.com/material-ui/material-icons/?query=launch&selected=Launch) | 
 
-### `npm test`
+## Adding A New Cohort
+*Note: This code should be refactored to match the way teams and automatically imported from folders.*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Ex: add `./src/data/cohorts.json` and a `getCohorts()` function to `./src/data/data.js`*
 
-### `npm run build`
+1. Add a folder for the cohort to `./src/data`
+    - `mkdir ./src/data/epsilon`
+2. Add a `teams.json` file that's an empty array.
+    - `echo [] >> ./src/data/epsilon/teams.json`
+3. Follow the steps for adding team info.
+4. Add a `<MenuItem>` for the cohort to [TeamView.js](./src/content/team/TeamView.js).
+5. Commit
+6. Push
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Adding Functionality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If functionality needs to be added, please branch and send a pull request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please try to maintain ~100% code coverage (so we can pretend we know what we're doing).

@@ -57,7 +57,7 @@ describe('<TeamCard>', function() {
     })
     it('should open and close the dialog', function() {
         render(<TeamCard {...testTeam} />)
-        let openButton = screen.getByRole("button", { name: "See All Projects"})
+        let openButton = screen.getByRole("button", { name: "See More"})
         userEvent.click(openButton)
         let dialog = screen.getByRole("dialog")
         expect(dialog).not.toBeNull()
