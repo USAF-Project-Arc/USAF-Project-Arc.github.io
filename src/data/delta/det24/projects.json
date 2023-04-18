@@ -2,7 +2,7 @@
     {
         "name": "Radar Simulator App",
         "description": "iOS app that takes ads-b data and displays it in a 4th Gen Radar \"b\" scope format, and RWR. Intended to be used in T-38 Training, to give earlier exposure to sensor manipulation for pilots in fighter training.",
-        "video": "",
+        "video": "https://youtu.be/uRzYu502588",
         "source": ""
     },
     {
