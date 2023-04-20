@@ -1,10 +1,13 @@
 // React
-import React from 'react'
+import React, { useState } from 'react'
 
 // MUI
-import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Toolbar, Typography, Link } from '@mui/material'
 
 function TopNav(props) {
+
+    // const navItems = ['About', 'Cohorts','Contact Us'];
+    // const [selectedNav, setSelectedNav] = useState();
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -22,12 +25,16 @@ function TopNav(props) {
                             mr: 1
                         }}
                     />
-                    <Typography
+                    <Link
+                        // component='typography'
+                        color="inherit"
                         variant="h4"
-                        sx={{ display: { xs: 'none', md: 'flex' }}}
-                    >
-                        Project Arc
-                    </Typography>
+                        sx={{ textDecoration: 'none', display: { xs: 'none', md: 'flex' }}}
+                        href='/'
+                        underline='none'
+                        >
+                            Project Arc
+                    </Link>
                     <Box sx={{flexGrow: 1}} />
                     <Button
                         variant="contained"
@@ -37,12 +44,6 @@ function TopNav(props) {
                         }}
                     >
                         Apply Now
-                    </Button>
-                    <Button
-                        variant="contained"
-                        href="mailto:projectarc@us.af.mil"
-                    >
-                        Contact Us
                     </Button>
                 </Toolbar>
             </AppBar>
