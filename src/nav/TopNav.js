@@ -31,7 +31,8 @@ function TopNav(props) {
                     <Box sx={{flexGrow: 1}} />
                     <Button
                         variant="contained"
-                        disabled
+                        href="https://usaf.dps.mil/teams/ProjectArc967?CT=1682364126715&OR=OWA-NT&CID=e8440631-dc0a-1d88-b0fc-0e6420833a08"
+                        target="_blank"
                         sx={{
                             mr: 1
                         }}
