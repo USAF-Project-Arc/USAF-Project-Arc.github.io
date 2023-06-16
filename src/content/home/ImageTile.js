@@ -5,7 +5,7 @@ import React from 'react'
 import { Box, Card, CardMedia, Stack, Typography } from '@mui/material'
 
 // react router dom
-import { Link } from 'react-router-dom/dist'
+import { Link } from 'react-router-dom'
 
 function TitleText(props) {
     return (
