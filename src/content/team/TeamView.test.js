@@ -12,7 +12,7 @@ describe('<TeamView>', function() {
         userEvent.click(cohortButton)
         let gamma = screen.getByRole("option", { name: "Cohort Gamma"})
         userEvent.click(gamma)
-        let text = screen.getByText("Outer Space")
+        let text = screen.getByText(/RQ-4/)
         expect(text).not.toBeNull()
     })
 })
