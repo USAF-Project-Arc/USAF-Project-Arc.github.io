@@ -2,9 +2,13 @@
 import React from 'react'
 
 // MUI
-import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Toolbar, Typography, useTheme } from '@mui/material'
+import { Link } from 'react-router-dom/dist'
+
 
 function TopNav(props) {
+
+    const theme = useTheme()
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -22,12 +26,51 @@ function TopNav(props) {
                             mr: 1
                         }}
                     />
-                    <Typography
-                        variant="h4"
-                        sx={{ display: { xs: 'none', md: 'flex' }}}
-                    >
-                        Project Arc
-                    </Typography>
+                    <Link to="/">
+                        <Button
+                            sx={{
+                                color: theme.palette.text.primary
+                            }}
+                        >
+                            Home
+                        </Button>
+                    </Link>
+                    <Link to="/">
+                        <Button
+                            sx={{
+                                color: theme.palette.text.primary
+                            }}
+                        >
+                            Mission
+                        </Button>
+                    </Link>
+                    <Link to="/">
+                        <Button
+                            sx={{
+                                color: theme.palette.text.primary
+                            }}
+                        >
+                            Projects
+                        </Button>
+                    </Link>
+                    <Link to="/">
+                        <Button
+                            sx={{
+                                color: theme.palette.text.primary
+                            }}
+                        >
+                            Team
+                        </Button>
+                    </Link>
+                    <Link to="/">
+                        <Button
+                            sx={{
+                                color: theme.palette.text.primary
+                            }}
+                        >
+                            Luminaries
+                        </Button>
+                    </Link>
                     <Box sx={{flexGrow: 1}} />
                     <Button
                         variant="contained"
