@@ -2,7 +2,7 @@
 import React from 'react'
 
 // MUI
-import { Box, Card, CardMedia, Stack, Typography } from '@mui/material'
+import { Box, Card, CardMedia, Typography } from '@mui/material'
 
 // react router dom
 import { Link } from 'react-router-dom'
