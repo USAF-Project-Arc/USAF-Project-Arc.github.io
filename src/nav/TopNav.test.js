@@ -1,5 +1,6 @@
 // testing help
 import { render } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 
 // to test
 import TopNav from './TopNav'
@@ -7,7 +8,9 @@ import TopNav from './TopNav'
 describe('<TopNav>', function() {
     it("doesn't do much... yet", function() {
         render(
-            <TopNav />
+            <BrowserRouter>
+                <TopNav />
+            </BrowserRouter>
         )
     })
 })
