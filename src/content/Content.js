@@ -2,7 +2,7 @@
 import React from 'react'
 
 // MUI
-import { Grid, Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 
 // Router
 import { Route, Routes } from 'react-router-dom'

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // MUI
-import { AppBar, Box, Button, Toolbar, Typography, useTheme } from '@mui/material'
+import { AppBar, Box, Button, Toolbar, useTheme } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 
